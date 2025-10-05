@@ -40,9 +40,12 @@ nvim /etc/systemd/system/tinyHTTP.service
 ```
 2) Enter the following
     (replace `/your/working/directory/` with the directory of your configuration JSON files and files to serve, and `/your/executable/path` with the directory to the tinyHTTP executable)
+> [!IMPORTANT]
+> It is highly advised to use a user and group other than `root` for security purposes.
+> (if you do, make sure the selected user and group have access to the `teenyHTTP` server and files)
 ```
 [Unit]
-Description=the tinyHTTP web server
+Description=the teenyHTTP web server
 After=syslog.target network.target
 
 [Service]
@@ -115,5 +118,5 @@ systemctl status teenyHTTP.service
             "", "index.html"
         }
         ```
-> [!IMPORTANT]
+> [!WARNING]
 > insure that you do not have a comma at the end of the last line before the ending brace
