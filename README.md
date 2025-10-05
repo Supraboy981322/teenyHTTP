@@ -14,8 +14,6 @@
 
 ## Install & Setup:
 
-> There are two ways to go about setting up tinyHTTP
-
 ### Install
 
     1) `cd` into your working directory
