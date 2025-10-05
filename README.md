@@ -9,7 +9,7 @@ The install script has more lines of Bash than the actual `main.go` source file.
 ## Features:
 
 - Manual overriding of paths
-- No dependencies (unless you compile it yourself)
+- No dependencies (install helper script requires Bash (unless you compile it yourself))
 - Easy port selection
 
 ---
@@ -17,6 +17,14 @@ The install script has more lines of Bash than the actual `main.go` source file.
 ## Install & Setup:
 
 ### Install
+
+0) Ensure you have `Bash` installed
+> [!NOTE]
+> not needed if not using install helper script
+
+```shell
+command -v bash
+```
 
 1) `cd` into your working directory
     (replace `/your/path/to/your/files` with your path)
