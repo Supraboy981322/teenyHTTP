@@ -26,11 +26,13 @@ The install script has more lines of Bash than the actual `main.go` source file.
 command -v bash
 ```
 
+
 1) `cd` into your working directory
     (replace `/your/path/to/your/files` with your path)
 ```shell
 cd /your/path/to/your/files
 ```
+
 
 2) Run the setup script
 ```shell
@@ -40,6 +42,7 @@ OR
 ```shell
 wget -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/install-1.sh | sh
 ```
+
 
 3) Follow the on-screen instructions
 
@@ -51,6 +54,7 @@ wget -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/insta
 ```shell
 nvim /etc/systemd/system/teenyHTTP.service
 ```
+
 
 2) Enter the following
     (replace `/your/working/directory/` with the directory of your configuration JSON files and files to serve, and `/your/executable/path` with the directory to the teenyHTTP executable)
@@ -75,6 +79,7 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
+
 3) Enable and start the service (you may need `su` permissions)
 ```shell
 systemctl enable teenyHTTP.service
@@ -84,10 +89,13 @@ then
 systemctl start teenyHTTP.service
 ```
 
+
 4) Make sure the service was started (you may need `su` permissions)
 ```shell
 systemctl status teenyHTTP.service
 ```
+
+---
 
 ## Configuration
 
@@ -99,13 +107,14 @@ systemctl status teenyHTTP.service
        ```shell
         nvim /your/working/dir/settings.json
         ```
-       
-    3) Edit the line that has `"port":`
+
+
+    2) Edit the line that has `"port":`
         (replace `1234` with the port you want teenyHTTP to use)
         ```
             "port": "1234",
         ```
-        
+
 - ### Changing the override setting
 
     1) Open your `settings.json` file
@@ -113,14 +122,15 @@ systemctl status teenyHTTP.service
         ```shell
         nvim /your/working/dir/settings.json
         ```
-        
+
+
     2) Edit the line that has `"override":`
         (replace `1234` with the port you want teenyHTTP to use)
         valid options are:  `true` and `false` (no quotations)
         ```
             "override": false,
         ```
-        
+
 - ### Configuring the override
 
     1) Open your `override.json` file
@@ -128,7 +138,8 @@ systemctl status teenyHTTP.service
         ```shell
         nvim /your/working/dir/override.json
         ```
-        
+
+
     2) Create a new line in the following format after the openning brace ( `{` )
         ```JSON
             "your-url/path": "your_file/path.html",
@@ -139,7 +150,6 @@ systemctl status teenyHTTP.service
             "your-url/path": "your_file/path.html",
             "", "index.html"
         }
-        ```
-        
+        ```        
 > [!WARNING]
 > insure that you do not have a comma at the end of the last line before the ending brace
