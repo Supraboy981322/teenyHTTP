@@ -115,5 +115,5 @@ systemctl status teenyHTTP.service
             "", "index.html"
         }
         ```
-        > [!IMPORTANT]
-        > insure that you do not have a comma at the end of the last line before the ending brace
+> [!IMPORTANT]
+> insure that you do not have a comma at the end of the last line before the ending brace
