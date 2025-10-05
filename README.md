@@ -39,11 +39,11 @@ wget -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/insta
 1) Create a systemd service file
     (you may need `su` permissions, replace `nvim` with your prefered text editor, such as `nano` [`nano` is easier than `nvim`])
 ```shell
-nvim /etc/systemd/system/tinyHTTP.service
+nvim /etc/systemd/system/teenyHTTP.service
 ```
 
 2) Enter the following
-    (replace `/your/working/directory/` with the directory of your configuration JSON files and files to serve, and `/your/executable/path` with the directory to the tinyHTTP executable)
+    (replace `/your/working/directory/` with the directory of your configuration JSON files and files to serve, and `/your/executable/path` with the directory to the teenyHTTP executable)
 > [!IMPORTANT]
 > It is highly advised to use a user and group other than `root` for security purposes.
 > (if you do, make sure the selected user and group have access to the `teenyHTTP` server and files)
@@ -67,11 +67,11 @@ WantedBy=multi-user.target
 
 3) Enable and start the service (you may need `su` permissions)
 ```shell
-systemctl enable tinyHTTP.service
+systemctl enable teenyHTTP.service
 ```
 then
 ```shell
-systemctl start tinyHTTP.service
+systemctl start teenyHTTP.service
 ```
 
 4) Make sure the service was started (you may need `su` permissions)
@@ -91,7 +91,7 @@ systemctl status teenyHTTP.service
         ```
        
     3) Edit the line that has `"port":`
-        (replace `1234` with the port you want tinyHTTP to use)
+        (replace `1234` with the port you want teenyHTTP to use)
         ```
             "port": "1234",
         ```
@@ -105,7 +105,7 @@ systemctl status teenyHTTP.service
         ```
         
     2) Edit the line that has `"override":`
-        (replace `1234` with the port you want tinyHTTP to use)
+        (replace `1234` with the port you want teenyHTTP to use)
         valid options are:  `true` and `false` (no quotations)
         ```
             "override": false,

@@ -117,5 +117,5 @@ if [[ $value == "true" ]]; then
     fi
 fi
 
-printf "setup complete\n"
-printf "thank you for picking teenyHTTP\n"
+printf "setup complete.\n"
+printf "thank you for picking teenyHTTP.\n"
