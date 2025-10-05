@@ -25,7 +25,7 @@ cd /your/path/to/your/files
 ```shell
 curl -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/install-1.sh | sh
 ```
-OR  
+  OR  
 ```shell
 wget -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/install-1.sh | sh
 ```
