@@ -33,52 +33,53 @@ wget -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/insta
 
 ### Setup
 
-    1) Create a systemd service file
-        (you may need `su` permissions, replace `nvim` with your prefered text editor, such as `nano` [`nano` is easier than `nvim`])
-        ```shell
-        nvim /etc/systemd/system/tinyHTTP.service
-        ```
-    2) Enter the following
-        (replace `/your/working/directory/` with the directory of your configuration JSON files and files to serve, and `/your/executable/path` with the directory to the tinyHTTP executable)
-        ```
-        [Unit]
-        Description=the tinyHTTP web server
-        After=syslog.target network.target
+1) Create a systemd service file
+    (you may need `su` permissions, replace `nvim` with your prefered text editor, such as `nano` [`nano` is easier than `nvim`])
+```shell
+nvim /etc/systemd/system/tinyHTTP.service
+```
+2) Enter the following
+    (replace `/your/working/directory/` with the directory of your configuration JSON files and files to serve, and `/your/executable/path` with the directory to the tinyHTTP executable)
+```
+[Unit]
+Description=the tinyHTTP web server
+After=syslog.target network.target
 
-        [Service]
-        User=root
-        Group=root
-        Type=simple
-        ExecStart=/
-        TimeoutStopSec=20
-        KillMode=process
-        Restart=always
+[Service]
+User=root
+Group=root
+Type=simple
+ExecStart=/
+TimeoutStopSec=20
+KillMode=process
+Restart=always
 
-        [Install]
-        WantedBy=multi-user.target
-        ```
-    3) Enable and start the service (you may need `su` permissions)
-        ```shell
-        systemctl enable tinyHTTP.service
-        ```
-        then
-        ```shell
-        systemctl start tinyHTTP.service
-        ```
-    4) Make sure the service was started (you may need `su` permissions)
-        ```shell
-        systemctl status teenyHTTP.service
-        ```
+[Install]
+WantedBy=multi-user.target
+```
+3) Enable and start the service (you may need `su` permissions)
+```shell
+systemctl enable tinyHTTP.service
+```
+then
+```shell
+systemctl start tinyHTTP.service
+```
+4) Make sure the service was started (you may need `su` permissions)
+```shell
+systemctl status teenyHTTP.service
+```
 ## Configuration
 
 - ### Setting the port
   
     1) Open your `settings.json` file
         (replace `/your/working/dir` with the path to your working directory, and `nvim` with your prefered text editor)
-        ```shell
+
+       ```shell
         nvim /your/working/dir/settings.json
         ```
-    2) Edit the line that has `"port":`
+    3) Edit the line that has `"port":`
         (replace `1234` with the port you want tinyHTTP to use)
         ```
             "port": "1234",
@@ -113,4 +114,5 @@ wget -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/insta
             "your-url/path": "your_file/path.html",
             "", "index.html"
         }
+        ```
         > insure that you do not have a comma at the end of the last line before the ending brace
