@@ -17,7 +17,7 @@
 ### Install
 
 1) `cd` into your working directory
-(replace `/your/path/to/your/files` with your path)
+    (replace `/your/path/to/your/files` with your path)
 ```shell
 cd /your/path/to/your/files
 ```
