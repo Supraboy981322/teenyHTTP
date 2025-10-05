@@ -2,6 +2,8 @@
 
 ### A basic HTTP server written in precisely 100 lines of Go.
 
+The install script has more lines of Bash than the actual `main.go` source file. Even this `README.md` file was written in more lines than teenyHTTP.
+
 ---
 
 ## Features:
