@@ -16,20 +16,20 @@
 
 ### Install
 
-    1) `cd` into your working directory
-        (replace `/your/path/to/your/files` with your path)
-        ```shell
-        cd /your/path/to/your/files
-        ```
-    2) Run the setup script
-        ```shell
-        curl -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/install-1.sh | sh
-        ```
-        OR  
-        ```shell
-        wget -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/install-1.sh | sh
-        ```
-    3) Follow the on-screen instructions
+1) `cd` into your working directory
+(replace `/your/path/to/your/files` with your path)
+```shell
+cd /your/path/to/your/files
+```
+2) Run the setup script
+```shell
+curl -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/install-1.sh | sh
+```
+OR  
+```shell
+wget -fsSL https://raw.githubusercontent.com/supraboy981322/teenyHTTP/main/install-1.sh | sh
+```
+3) Follow the on-screen instructions
 
 ### Setup
 
