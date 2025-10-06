@@ -2,12 +2,14 @@
 
 ### A basic HTTP server written in precisely 100 lines of Go.
 
+The install script has more lines of Bash than the actual `main.go` source file. Even this `README.md` file was written in more lines than teenyHTTP.
+
 ---
 
 ## Features:
 
 - Manual overriding of paths
-- No dependencies (unless you compile it yourself)
+- No dependencies (install helper script requires Bash (unless you compile it yourself))
 - Easy port selection
 
 ---
@@ -15,6 +17,14 @@
 ## Install & Setup:
 
 ### Install
+
+0) Ensure you have `Bash` installed
+> [!NOTE]
+> not needed if not using install helper script
+
+```shell
+command -v bash
+```
 
 1) `cd` into your working directory
     (replace `/your/path/to/your/files` with your path)
@@ -132,4 +142,4 @@ systemctl status teenyHTTP.service
         ```
         
 > [!WARNING]
-> insure that you do not have a comma at the end of the last line before the ending brace
+> Ensure that you do not have a comma at the end of the last line before the ending brace

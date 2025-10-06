@@ -142,4 +142,4 @@ systemctl status teenyHTTP.service
         ```
         
 > [!WARNING]
-> insure that you do not have a comma at the end of the last line before the ending brace
+> Ensure that you do not have a comma at the end of the last line before the ending brace
