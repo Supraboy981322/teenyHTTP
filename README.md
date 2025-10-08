@@ -66,7 +66,7 @@ After=syslog.target network.target
 User=root
 Group=root
 Type=simple
-ExecStart=/
+ExecStart/your/executable/path/teenyHTTP
 TimeoutStopSec=20
 KillMode=process
 Restart=always
